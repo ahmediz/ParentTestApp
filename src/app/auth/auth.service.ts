@@ -15,6 +15,7 @@ export class AuthService {
     private uiService: UiService
   ) {}
 
+  // User Login
   login(credientials) {
     this.uiService.isLoading.next(true);
     this.http.post(this.baseURL + '/api/login', credientials).subscribe(res => {
@@ -24,6 +25,7 @@ export class AuthService {
     });
   }
 
+  // Checking if User is Authenticated
   isAuthenticated() {
     return this.token != null;
   }
