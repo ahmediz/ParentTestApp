@@ -1,0 +1,265 @@
+@import './variables';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: $lightGrey;
+  color: $cement;
+  font-family: $font;
+  font-size: 1.5rem;
+}
+
+.mat-progress-spinner {
+  margin: 0 auto;
+}
+
+.mat-dialog-container {
+  overflow: visible !important;
+}
+
+.page-header {
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  color: $cement;
+}
+
+.placeholder-img {
+  background: #7f8c8d;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel_success {
+  background: #2ecc71;
+  color: white;
+  span {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.panel_danger {
+  background: #e74c3c;
+  color: white;
+  span {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.placeholder-img img {
+  width: 30% !important;
+  height: 30% !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+// Forms
+.form-control {
+  height: 36px;
+  border-color: #d6dbe4;
+  font-size: 1.5rem;
+  &:focus {
+    border-color: $purple;
+    box-shadow: none;
+  }
+
+  &.ng-invalid.ng-touched {
+    border-color: red;
+  }
+}
+
+// Buttons
+.btn {
+  border-radius: 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+  &.btn-purple {
+    background: $purple;
+    color: white;
+
+    &:hover {
+      background: none;
+      color: $purple;
+      border-color: $purple;
+    }
+
+    &.btn-outline {
+      background: none;
+      color: $purple;
+      border-color: $purple;
+
+      svg,
+      path {
+        fill: $purple !important;
+      }
+
+      &:hover {
+        background: $purple;
+        color: white;
+
+        svg,
+        path {
+          fill: white !important;
+        }
+      }
+    }
+  }
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}
+
+// Breadcrumb
+.breadcrumb {
+  background: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  font-size: 1.2rem;
+
+  a {
+    color: $purple;
+  }
+}
+
+// Content
+.content-panel {
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.users-table {
+  table {
+    width: 100%;
+
+    tr {
+      cursor: pointer;
+      outline: 0;
+
+      &:hover {
+        td > div {
+          background-color: rgba(142, 68, 173, 0.05);
+        }
+      }
+
+      &:last-child td {
+        border-bottom: 0;
+      }
+    }
+
+    th {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #7f8c8d;
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    td {
+      padding: 1rem 0;
+      border-bottom: 1px solid #dedede;
+
+      > div {
+        padding: 1.5rem;
+        border-radius: 0 1rem 1rem 0;
+        height: 8.5rem;
+        transition: 0.3s;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 5.5rem;
+          height: 5.5rem;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+
+        h4 {
+          font-size: 1.5rem;
+          color: $cement;
+          font-weight: 500;
+        }
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+
+        .btn {
+          border-color: $purple;
+          background: white;
+          width: 3rem;
+          height: 3rem;
+          padding: 0;
+          border-radius: 3px;
+          margin: 0 7.5px;
+          box-shadow: none;
+          color: $purple;
+
+          svg,
+          path {
+            fill: $purple;
+            margin: 0;
+          }
+
+          img {
+            max-height: 1.5rem;
+            max-width: 1.5rem;
+          }
+
+          &:hover {
+            background: $purple;
+            color: white;
+
+            svg,
+            path {
+              fill: white;
+            }
+          }
+        }
+
+        > span {
+          margin-left: auto;
+        }
+      }
+
+      &:first-child {
+        width: 80%;
+
+        > div {
+          border-radius: 1rem 0 0 1rem;
+        }
+      }
+    }
+  }
+
+  .placeholder-img {
+    margin-right: 1rem;
+  }
+}

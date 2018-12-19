@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables';
+.login-form {
+  .form {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .right {
+    background: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    font-weight: bold;
+    color: #7f8c8d;
+    margin: 1rem 0 2.5rem;
+    span {
+      color: $purple;
+    }
+  }
+
+  label {
+    color: #7f8c8d;
+  }
+
+  a {
+    color: $purple;
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    text-transform: uppercase;
+  }
+}

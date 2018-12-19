@@ -1,0 +1,12 @@
+<div class="confirm-dialog">
+  <p>Are you sure want to delete</p>
+  <h5>{{ data.user.first_name }} {{ data.user.last_name }}</h5>
+  <div class="actions">
+    <button type="button" class="btn btn-purple btn-outline" mat-dialog-close>
+      No
+    </button>
+    <button type="submit" class="btn btn-purple" [mat-dialog-close]="true">
+      Yes
+    </button>
+  </div>
+</div>

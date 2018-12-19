@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables';
+
+.user-details {
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: $lightGrey;
+  margin: -1.5rem -1.5rem -1.5rem 0;
+  padding: 1.5rem;
+  min-width: 260px;
+  text-align: center;
+  height: calc(100% + 3rem);
+
+  img {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+  }
+
+  h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    color: $cement;
+    font-weight: 500;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      flex-basis: calc(50% - 5px);
+    }
+  }
+
+  .placeholder-img {
+    width: 12.5rem !important;
+    height: 12.5rem !important;
+    margin: 0 auto;
+  }
+}

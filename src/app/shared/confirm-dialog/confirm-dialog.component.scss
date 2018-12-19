@@ -1,0 +1,17 @@
+@import '../../../assets/styles/variables';
+.confirm-dialog {
+  text-align: center;
+}
+h5 {
+  color: $cement;
+  font-size: 1.5rem;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+
+  .btn {
+    flex-basis: calc(50% - 5px);
+  }
+}

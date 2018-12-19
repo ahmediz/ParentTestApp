@@ -1,0 +1,45 @@
+<div class="user-details" *ngIf="user">
+  <div class="placeholder-img" *ngIf="!user.avatar">
+    <img src="assets/images/user-placeholder.svg" alt="" />
+  </div>
+  <img *ngIf="user.avatar" [src]="user.avatar" alt="" />
+  <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+  <div class="actions">
+    <button
+      class="btn btn-purple btn-outline"
+      (click)="openDialog(user.id.toString())"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="15"
+        height="15"
+        viewBox="0 0 15 15"
+      >
+        <path
+          fill="#FFF"
+          fill-rule="nonzero"
+          d="M12.169 0a.786.786 0 0 0-.558.231L10.263 1.58l3.158 3.158 1.348-1.348a.789.789 0 0 0 0-1.116L12.727.23A.787.787 0 0 0 12.17 0zm-3.09 2.763L0 11.843V15h3.158l9.079-9.079-3.158-3.158z"
+        />
+      </svg>
+      <span>Edit</span>
+    </button>
+    <button
+      class="btn btn-purple btn-outline"
+      (click)="delete(user.id.toString())"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="15"
+        viewBox="0 0 12 15"
+      >
+        <path
+          fill="#8E44AD"
+          fill-rule="nonzero"
+          d="M4.5 0l-.75.75H0v1.5h12V.75H8.25L7.5 0h-3zM.75 3.75v9.75c0 .825.675 1.5 1.5 1.5h7.5c.825 0 1.5-.675 1.5-1.5V3.75H.75z"
+        />
+      </svg>
+      <span>Delete</span>
+    </button>
+  </div>
+</div>

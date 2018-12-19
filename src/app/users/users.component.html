@@ -1,0 +1,42 @@
+<div class="page-header">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="" routerLink="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="" routerLink="/">Dashboard</a></li>
+      </ol>
+    </nav>
+    <div class="row align-items-center">
+      <div class="col-md-6"><h1>Users List</h1></div>
+      <div class="col-md-6 text-right">
+        <button class="btn btn-purple" (click)="openDialog()">
+          + New User
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-panel">
+    <mat-spinner *ngIf="!users"></mat-spinner>
+    <div class="users" *ngIf="users">
+      <div class="users-table">
+        <table>
+          <thead>
+            <th>User</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let userEl of users"
+              class="app-user-item"
+              [user]="userEl"
+            ></tr>
+          </tbody>
+        </table>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
